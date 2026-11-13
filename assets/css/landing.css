@@ -241,6 +241,17 @@ a.lp-aval-mini:hover { background: rgba(255,255,255,.14); border-color: rgba(255
 .lp-dados li:last-child { font-weight: 500; color: var(--tinta-70); }
 .lp-servico .btn { align-self: flex-start; }
 
+/* Fotografias de trabalhos */
+.lp-galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.lp-galeria figure { position: relative; overflow: hidden; border-radius: 18px; background: var(--papel-2); }
+.lp-galeria img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .4s ease; }
+.lp-galeria figure:hover img { transform: scale(1.03); }
+.lp-galeria figcaption {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 36px 18px 16px;
+    background: linear-gradient(180deg, transparent, rgba(12,14,16,.82));
+    color: #fff; font-size: 14.5px; font-weight: 600; line-height: 1.35;
+}
+
 /* Avaliações */
 .lp-bloco--branco { background: #fff; }
 .lp-aval { display: grid; grid-template-columns: minmax(250px, 300px) minmax(0, 1fr); gap: clamp(18px, 2.6vw, 28px); align-items: stretch; }
